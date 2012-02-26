@@ -19,6 +19,7 @@ var github = (function(){
           for (var i = 0; i < data.repositories.length; i++) {
             if (options.skip_forks && data.repositories[i].fork) { continue; }
             if (data.repositories[i].url == "https://github.com/tomhoover/tomhoover.github.com") { continue; }
+            if (data.repositories[i].url == "https://github.com/tomhoover/dokuwiki") { continue; }
             repos.push(data.repositories[i]);
           }
           repos.sort(function(a, b) {
